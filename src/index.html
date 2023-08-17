@@ -3,8 +3,16 @@
 
  <head>
     <meta charset="utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/general_styles.css">
+
     <title>Andrews accessible websites!</title>
  </head>
 
@@ -16,16 +24,28 @@
             <a href="gallery.html"><button class="menu-button">Gallery</button></a>
             <a href="about.html"><button class="menu-button">About</button></a>
         </div> <!-- closes the page-links div -->
+
         <div class="main">
             <h1>Welcome to Andrew's website designs!</h1>
+
+            <figure>
+                <img class="home_image" src="images/mountains.png" 
+                alt="A beautiful and expansive
+                mountain pass">
+                <figcaption>Photo taken by Finge 
+                    Holden src: Unsplash.com</figcaption>
+            </figure>
 
             <p>You'll love how fast and functional they are!</p>
             <p>And they are affordable as well!</p>
             <p>Browse the gallery tab to see options and pricing!</p>
 
             <button id="discount-code">Give me a discount code!</button>
+            <p id="your-discount-code">
+                Click the button above to reveal your discount code.</p>
             <script src="js/site_interactions.js"></script>
         </div> <!-- closes the main div -->
+
     </div> <!-- closes the grid-container div -->
 </body>
 </html>

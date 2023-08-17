@@ -4,9 +4,11 @@ body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
    }
     h1 {
         color: #379EA8;
+        font-weight: 300;
         }
 
 .grid-container {
@@ -49,3 +51,14 @@ body {
     border-radius: 5px;
     border-color: white;
     }
+
+.home_image {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+figcaption {
+    color: grey;
+    font-weight: 100;
+}

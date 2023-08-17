@@ -2,11 +2,22 @@
 <html lang="en">
 
  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/general_styles.css">
-    <script src="js/site_interactions.js"></script>
-    <title></title>
+   <meta charset="utf-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/general_styles.css">
+
+   <link rel="stylesheet" href="css/about_styles.css">
+
+   <script src="js/site_interactions.js"></script>
+
+   <title></title>
  </head>
  <body>
       <div class="grid-container">
@@ -16,13 +27,43 @@
             <a href="gallery.html"><button class="menu-button">Gallery</button></a>
             <a href="about.html"><button class="menu-button">About</button></a>
          </div> <!-- closes the page-links div -->
+
          <div class="main">
             <h1>Welcome to the about section</h1>
             
             <p>Here's where you can read things about us</p>
             <script src="js/site_interactions.js"></script>
          </div> <!-- closes the main div -->
+
       </div> <!-- closes the grid-container div -->
+
+      <div class="about-container">
+         <div id="about-item-1">
+            <figure class="section-icon">
+               <img src="images/sun.png" alt="Small sun icon">
+            </figure>
+            <h4>Current Weather</h4>
+            <p>Temperature</p>
+            <p id="current_temperature">??</p>
+            <p>Wind Speed</p>
+            <p id="current_windspeed">??</p>
+         </div>
+
+         <div id="about-item-2">
+            <h3>This is the item number 2 H3</h3>
+            <p>Here is a p line under H3</p>
+            <h3>Here is a second line of H3</h3>
+            <p>And a p line undernearth the second h3</p>
+         </div>         
+
+         <div id="about-item-3">
+
+         </div>         
+
+         <div id="about-item-4">
+
+         </div>
+      </div>
       <script src="js/about_api.js"></script>
    </body>
 </html>
