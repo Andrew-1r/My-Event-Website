@@ -6,10 +6,11 @@ body {
     width: 100%;
     font-family: 'Poppins', sans-serif;
    }
-    h1 {
-        color: #379EA8;
-        font-weight: 300;
-        }
+
+h1 {
+    color: #379EA8;
+    font-weight: 300;
+    }
 
 .grid-container {
     display: grid;
