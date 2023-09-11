@@ -78,12 +78,12 @@ const handleSubmit = (event) => {
     };
 
     fetch(url, {
-        moethodd: method,
+        method: method,
         headers: headers,
         body: JSON.stringify(payload)
     })
     .then((response) => response.text())
-    .then((date) => {
+    .then((data) => {
         if (data === 'added') {
             responseMessage.textContent = 'Subscription successful. Thank you for subscribing!';
         } else if (data === 'exists') {

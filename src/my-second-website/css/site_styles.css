@@ -1,0 +1,89 @@
+:root {
+    --green: #00bf7d;
+    --lblue: #00b4c5;
+    --mblue: #0073e6;
+    --dblue: #2546f0;
+    --purple: #5928ed;
+
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: var(--purple)
+}
+
+/* Flexbox layout for overall page */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-header-menu, .flex-footer-menu, .flex-side-menu {
+    flex-shrink: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 4px 0px 4px;
+}
+
+.flex-main-content {
+    flex: 1;
+}
+
+/* Mobile first */
+.flex-header-menu {
+    display: none;
+}
+
+.flex-footer-menu {
+    display: block;
+}
+
+.flex-side-menu {
+    display: none;
+}
+
+/* Set width to full screen */
+.main-contrainer {
+    width: 100vw;
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 992px) {
+    .flex-header-menu {
+        display: block;
+    }
+    .flex-side-menu {
+        display: none;
+    }
+    .flex-footer-menu {
+        display: none;
+    }
+    .main-contrainer {
+        width: 75vw;
+    }
+}
+
+/* Media query for landscape tablets and phones */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    .flex-header-menu {
+        display: none;
+    }
+    .flex-side-menu {
+        display: block;
+    }
+    .flex-footer-menu {
+        display: none;
+    }
+}
