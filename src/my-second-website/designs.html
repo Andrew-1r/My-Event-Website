@@ -15,6 +15,7 @@
 
     <body>
         <div class="flex-container">
+            <!-- START OF HEADER AND SIDE BAR -->
             <header class="flex-header-menu header-menu" aria-label="Main menu">
                 <div class="header-name">
                     <a href="index.html" class="nav-link brand" aria-label="Home page" aria-current="page" tab-index="0">Andrew Wilson</a>
@@ -43,9 +44,49 @@
                     <span>About Andrew</span>
                 </a>  
             </aside>
+            <!-- END OF HEADER AND SIDE BAR -->
+
             <section class="flex-main-content main-content" aria-label="Main content">
                 <!-- Main content will go here -->
+                <div class="grid-row">
+                    <div class="col-12 col-md-6 col-lg-4" style="background-color: skyblue;">
+                        <h1 class="page-header">Designs</h1>
+                    </div>    
+                </div>
+                <div class="col-12 col-md-12 col-lg-4" style="background-color: palegoldenrod;">
+                    <p class="grab-text">I love to design things that are functional and accessible to a wide audience.</p>
+                        <!-- nested divs/columns/grids -->
+                        <!-- <div class="grid-row">
+                        <div class="col-6" style="background-color: palegreen;">
+                        </div>
+                        <div class="col-6" style="background-color: palevioletred;">
+                        </div>
+                        </div>                         -->
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" role="group" aria-labelledby="card1-title" aria-describedby="card1-desc">
+                        <h2 class="card-header m-2" id="card1-title">Tropical Fish</h2>
+                        <img class="card-banner-image" src="media/fish.jpg">
+                        <p class="card-body-text p-2" id="card1-desc">Tropical fish is a fish that swims peacefully in the ocean</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" aria-labelledby="card2-title" aria-describedby="card2-desc">
+                        <h2 class="card-header m-2" id="card2-title">Seahorse</h2>
+                        <img class="card-banner-image" src="media/seahorse.jpg">
+                        <p class="card-body-text p-2" id="card2-desc">Seahorses are just like horses except they live in the ocean and don't have hooves</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" aria-labelledby="card3-title" aria-describedby="card3-desc">
+                        <h2 class="card-header m-2" id="card3-title">Seaweed</h2>
+                        <img class="card-banner-image" src="media/seaweed.jpg">
+                        <p class="card-body-text p-2" id="card3-desc">Seaweed looks really cool as well, like weeds but in the sea</p>                        
+                    </div>
+                </div>          
             </section>
+
+            <!-- START OF FOOTER -->
             <footer class="flex-footer-menu footer-menu" aria label="Main menu">
                 <a href="index.html" class="nav-link" aria-label="Home page" aria-current="page">
                     <img src="media/home.png" alt="Home">
@@ -64,9 +105,11 @@
                     <span>About Andrew</span>
                 </a>  
             </footer>
+            <!-- END OF FOOTER -->
         </div>
 
         <!-- Site JS -->
         <script src="js/site_interactions.js"></script>
+        <script src="js/card_height.js"></script>
     </body>
 </html>
