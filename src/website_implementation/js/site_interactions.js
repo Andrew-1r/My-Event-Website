@@ -13,3 +13,12 @@ function search() {
     const filters = document.getElementById("search-filter").value;
     //future search logic goes here, e.g. combine search terms and filter
 }
+
+function toggle_filter_form() {
+    var filters = document.getElementById("search-filter-form");
+    if (filters.style.display === "block") {
+        filters.style.display = "none";
+    } else {
+        filters.style.display = "block";
+    }
+}

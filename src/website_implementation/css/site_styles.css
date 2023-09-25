@@ -68,6 +68,9 @@ body {
 #search-button {
     color: #0073e6;
 }
+#search-filter-form {
+    display: none;
+}
 
 /* Landscape phones and tablets */
 @media only screen and (min-width: 601px) and (max-width: 992px) {

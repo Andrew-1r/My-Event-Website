@@ -71,11 +71,24 @@
                     type="text" 
                     id="search-box" 
                     placeholder="Enter an activity, suburb, or state...">
-                <select id="search-filter-button">
-                    <option value="all">All</option>
-                    <option value="books">Books</option>
-                    <option value="movies">Movies</option>
-                </select>
+                <button 
+                    id="search-filter-button"
+                    onclick="toggle_filter_form()">Filters
+                </button>
+                <div id="search-filter-form">
+                    <label><input 
+                        type="checkbox" 
+                        name="filter" 
+                        value="all"> Yoga</label>
+                    <label><input 
+                        type="checkbox" 
+                        name="filter" 
+                        value="books"> Hikes</label>
+                    <label><input 
+                        type="checkbox" 
+                        name="filter" 
+                        value="movies"> Book clubs</label>
+                </div>
                 <button onclick="search()" id="search-button">Search</button>
             </div>
 
