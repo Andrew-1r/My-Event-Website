@@ -17,7 +17,6 @@
 
     <body>
         <div class="flex-container">
-            <!-- START OF FOOTER -->
             <header class="flex-header-menu header-menu" aria label="Main menu">
                 <a
                     href="index.html"
@@ -25,41 +24,46 @@
                     aria-label="Home page"
                     aria-current="page"
                 >
-                    <img src="media/menu.png" alt="Home" />
-                    <span>Menu</span>
+                    <div class="header-icon-wrapper">
+                        <img src="media/menu.png" alt="Home" />
+                        <span>Menu</span>
+                    </div>
                 </a>
                 <a
-                    href="designs.html"
+                    href="index.html"
                     class="nav-link"
                     aria-label="Designs"
                     aria-current="page"
                 >
-                    <img src="media/logo.png" alt="Designs" />
-                    <span>welldone.com</span>
-                </a>
-                <a
-                    href="demos.html"
-                    class="nav-link"
-                    aria-label="Demos"
-                    aria-current="page"
-                >
-                    <span>Sign in</span>
+                    <div class="header-icon-wrapper">
+                        <img src="media/logo.png" alt="Designs" />
+                        <span>welldone.com</span>
+                    </div>
                 </a>
                 <a
                     href="about.html"
-                    class="nav-link"
+                    class="nav-link button-link"
                     aria-label="About"
                     aria-current="page"
                 >
-                    <span>Join</span>
+                    <span>Sign In</span>
                 </a>
             </header>
-            <!-- END OF FOOTER -->
-        </div>
-        <h1>Testing</h1>
-        <p>Does this work</p>
-        <p>And this</p>
-    </body>
 
+            <section
+                class="flex-main-content main-content"
+                aria-label="Main content"
+            >
+                <!-- Main content goes here -->
+                <div class="centered-content">
+                    <div class="text-content">
+                        <h1>Testing</h1>
+                        <p>Does this work</p>
+                        <p>And this</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
     <script src="js/site_interactions.js"></script>
 </html>
