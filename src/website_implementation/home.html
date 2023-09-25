@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Well Done</title>
+        <link rel="stylesheet" href="css/site_styles.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+            rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <header class="col-12 flex-header" aria label="Main menu">
+                <a
+                    href="javascript:void(0);"
+                    class="icon nav-link"
+                    onclick="myFunction()">
+                    <div class="header-icon-wrapper">
+                        <img src="media/menu.png" alt="Home" />
+                        <span>Menu</span>
+                    </div>
+                </a>
+                <!-- original burger menu
+                <a
+                    href="index.html"
+                    class="nav-link"
+                    aria-label="Home page"
+                    aria-current="page">
+                    <div class="header-icon-wrapper">
+                        <img src="media/menu.png" alt="Home" />
+                        <span>Menu</span>
+                    </div>
+                </a> -->
+                <!-- home and sign in button -->
+                <a
+                    href="index.html"
+                    class="nav-link home-link"
+                    aria-label="Designs"
+                    aria-current="page">
+                    <div class="header-icon-wrapper home-link">
+                        <img src="media/logo.png" alt="Designs" />
+                        <span>welldone.com</span>
+                    </div>
+                </a>
+                <a
+                    href="about.html"
+                    class="button-link"
+                    aria-label="About"
+                    aria-current="page">
+                    <span>Sign In</span>
+                </a>
+                <div id="burger-links">
+                    <a href="home.html" class="nav-link">Search</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                    <a href="profile.html" class="nav-link">My Profile</a>
+                </div>
+            </header>
+
+            <div class="col-12">Item 2</div>
+            <div class="col-12">Item 3</div>
+        </div>
+        <h1>Home page</h1>
+        <script src="js/site_interactions.js"></script>
+    </body>
+</html>
