@@ -16,41 +16,69 @@
 
     <body>
         <div class="grid-container">
-            <header class="col-12 flex-header" aria label="Main menu">
+            <!-- header start -->
+            <header class="col-12 flex-header" aria-label="Main menu">
                 <a
                     href="javascript:void(0);"
                     class="icon nav-link"
+                    aria-label="Toggle main menu"
+                    aria-controls="burger-links"
+                    aria-expanded="false"
                     onclick="burger_function()">
                     <div class="header-icon-wrapper">
                         <img src="media/menu.png" alt="Home" />
                         <span>Menu</span>
                     </div>
                 </a>
-                <a
-                    href="index.html"
-                    class="nav-link home-link"
-                    aria-label="Designs"
-                    aria-current="page">
+                <a href="home.html" class="nav-link home-link">
                     <div class="header-icon-wrapper home-link">
                         <img src="media/logo.png" alt="Designs" />
                         <span>welldone.com</span>
                     </div>
                 </a>
                 <a
-                    href="about.html"
+                    href="login.html"
                     class="button-link"
                     aria-label="About"
                     aria-current="page">
                     <span>Sign In</span>
                 </a>
-                <div id="burger-links">
-                    <a href="home.html" class="nav-link">Search</a>
-                    <a href="login.html" class="nav-link">Login</a>
-                    <a href="profile.html" class="nav-link">My Profile</a>
+                <div
+                    id="burger-links"
+                    role="navigation"
+                    aria-labelledby="menuLabel">
+                    <a 
+                        href="home.html" 
+                        aria-label="Search" 
+                        class="nav-link"
+                        >Search</a>
+                    <a 
+                        href="login.html" 
+                        aria-label="Login" 
+                        class="nav-link"
+                        >Login</a>
+                    <a
+                        href="profile.html"
+                        aria-label="My Profile"
+                        class="nav-link"
+                        >My Profile</a>
                 </div>
             </header>
+            <!-- header end -->
+            <div class="col-12">
+                <!-- search box, filter, button -->
+                <input 
+                    type="text" 
+                    id="search-box" 
+                    placeholder="Enter an activity, suburb, or state...">
+                <select id="search-filter-button">
+                    <option value="all">All</option>
+                    <option value="books">Books</option>
+                    <option value="movies">Movies</option>
+                </select>
+                <button onclick="search()" id="search-button">Search</button>
+            </div>
 
-            <div class="col-12">Item 2</div>
             <div class="col-12">Item 3</div>
         </div>
         <h1>Home page</h1>
