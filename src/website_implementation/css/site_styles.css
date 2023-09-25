@@ -58,7 +58,7 @@ body {
     display: none;
 }
 .flex-header #burger-links {
-    display: flex;
+    display: none;
     background-color: whitesmoke;
     padding: 4px;
     flex-direction: column;
