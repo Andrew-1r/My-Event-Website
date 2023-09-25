@@ -4,22 +4,22 @@
     --mblue: #0073e6;
     --dblue: #2546f0;
     --purple: #5928ed;
-
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: var(--dblue);
 }
 
 /* base styles */
 h1 {
-    color: var(--purple)
+    color: var(--purple);
 }
 
 .nav-link {
@@ -104,7 +104,9 @@ h1 {
     min-height: 100vh;
 }
 
-.flex-header-menu, .flex-footer-menu, .flex-side-menu {
+.flex-header-menu,
+.flex-footer-menu,
+.flex-side-menu {
     flex-shrink: 0;
     background-color: #000;
     color: #fff;
@@ -154,18 +156,42 @@ h1 {
 }
 
 /* width of items in grid row */
-.col-1 { grid-column: span 1; }
-.col-2 { grid-column: span 2; }
-.col-3 { grid-column: span 3; }
-.col-4 { grid-column: span 4; }
-.col-5 { grid-column: span 5; }
-.col-6 { grid-column: span 6; }
-.col-7 { grid-column: span 7; }
-.col-8 { grid-column: span 8; }
-.col-9 { grid-column: span 9; }
-.col-10 { grid-column: span 10; }
-.col-11 { grid-column: span 11; }
-.col-12 { grid-column: span 12; }
+.col-1 {
+    grid-column: span 1;
+}
+.col-2 {
+    grid-column: span 2;
+}
+.col-3 {
+    grid-column: span 3;
+}
+.col-4 {
+    grid-column: span 4;
+}
+.col-5 {
+    grid-column: span 5;
+}
+.col-6 {
+    grid-column: span 6;
+}
+.col-7 {
+    grid-column: span 7;
+}
+.col-8 {
+    grid-column: span 8;
+}
+.col-9 {
+    grid-column: span 9;
+}
+.col-10 {
+    grid-column: span 10;
+}
+.col-11 {
+    grid-column: span 11;
+}
+.col-12 {
+    grid-column: span 12;
+}
 
 /* Media query for desktop */
 @media only screen and (min-width: 992px) {
@@ -199,18 +225,42 @@ h1 {
         width: 75vw;
     }
     /* width of items in grid row */
-    .col-lg-1 { grid-column: span 1; }
-    .col-lg-2 { grid-column: span 2; }
-    .col-lg-3 { grid-column: span 3; }
-    .col-lg-4 { grid-column: span 4; }
-    .col-lg-5 { grid-column: span 5; }
-    .col-lg-6 { grid-column: span 6; }
-    .col-lg-7 { grid-column: span 7; }
-    .col-lg-8 { grid-column: span 8; }
-    .col-lg-9 { grid-column: span 9; }
-    .col-lg-10 { grid-column: span 10; }
-    .col-lg-11 { grid-column: span 11; }
-    .col-lg-12 { grid-column: span 12; }
+    .col-lg-1 {
+        grid-column: span 1;
+    }
+    .col-lg-2 {
+        grid-column: span 2;
+    }
+    .col-lg-3 {
+        grid-column: span 3;
+    }
+    .col-lg-4 {
+        grid-column: span 4;
+    }
+    .col-lg-5 {
+        grid-column: span 5;
+    }
+    .col-lg-6 {
+        grid-column: span 6;
+    }
+    .col-lg-7 {
+        grid-column: span 7;
+    }
+    .col-lg-8 {
+        grid-column: span 8;
+    }
+    .col-lg-9 {
+        grid-column: span 9;
+    }
+    .col-lg-10 {
+        grid-column: span 10;
+    }
+    .col-lg-11 {
+        grid-column: span 11;
+    }
+    .col-lg-12 {
+        grid-column: span 12;
+    }
 
     .grab-text {
         text-align: left !important;
@@ -246,18 +296,42 @@ h1 {
         display: none;
     }
     /* width of items in grid row */
-    .col-md-1 { grid-column: span 1; }
-    .col-md-2 { grid-column: span 2; }
-    .col-md-3 { grid-column: span 3; }
-    .col-md-4 { grid-column: span 4; }
-    .col-md-5 { grid-column: span 5; }
-    .col-md-6 { grid-column: span 6; }
-    .col-md-7 { grid-column: span 7; }
-    .col-md-8 { grid-column: span 8; }
-    .col-md-9 { grid-column: span 9; }
-    .col-md-10 { grid-column: span 10; }
-    .col-md-11 { grid-column: span 11; }
-    .col-md-12 { grid-column: span 12; }
+    .col-md-1 {
+        grid-column: span 1;
+    }
+    .col-md-2 {
+        grid-column: span 2;
+    }
+    .col-md-3 {
+        grid-column: span 3;
+    }
+    .col-md-4 {
+        grid-column: span 4;
+    }
+    .col-md-5 {
+        grid-column: span 5;
+    }
+    .col-md-6 {
+        grid-column: span 6;
+    }
+    .col-md-7 {
+        grid-column: span 7;
+    }
+    .col-md-8 {
+        grid-column: span 8;
+    }
+    .col-md-9 {
+        grid-column: span 9;
+    }
+    .col-md-10 {
+        grid-column: span 10;
+    }
+    .col-md-11 {
+        grid-column: span 11;
+    }
+    .col-md-12 {
+        grid-column: span 12;
+    }
 
     .grab-text {
         text-align: left !important;
