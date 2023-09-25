@@ -5,6 +5,7 @@
     --dblue: #2546f0;
     --purple: #5928ed;
 }
+/* general styling */
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -23,21 +24,31 @@ body {
 .text-center {
     text-align: center;
 }
-/* flexbox layout for overall page */
+/* flexbox and grid setup for page */
 .flex-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-.flex-header-menu {
-    flex-shrink: 0;
-    color: black;
-    padding: 0px 4px 0px 4px;
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(10vh, auto);
+    gap: 16px;
+    margin: 2vh, 2vw;
 }
+/* set width to full screen */
+.main-container {
+    width: 100vw;
+}
+/* header setup */
 .flex-main-content {
     flex: 1;
 }
 .flex-header-menu {
+    flex-shrink: 0;
+    color: black;
+    padding: 0px 4px 0px 4px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -57,20 +68,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* set width to full screen */
-.main-container {
-    width: 100vw;
-}
-/* setup grid */
-.grid-row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(10vh, auto);
-    gap: 16px;
-    margin: 2vh, 2vw;
-}
-
-/* width of items in grid row */
+/* quick column setup */
 .col-1 {
     grid-column: span 1;
 }
@@ -107,7 +105,6 @@ body {
 .col-12 {
     grid-column: span 12;
 }
-/* setting up quick margin and padding */
 /* 2% margin on all sides */
 .m-2 {
     margin: 2vh 2vw;
