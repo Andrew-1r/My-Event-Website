@@ -64,31 +64,60 @@
                         >My Profile</a>
                 </div>
             </header>
-            <!-- header end -->
+
             <div class="col-12">
-                <!-- search box, filter, button -->
+                <!-- search box -->
                 <input 
                     type="text" 
                     id="search-box" 
                     placeholder="Enter an activity, suburb, or state...">
+                <!-- search filter form -->
                 <button 
-                    id="search-filter-button"
-                    onclick="toggle_filter_form()">Filters
+                    id="search-filter-button">Filters
                 </button>
-                <div id="search-filter-form">
-                    <label><input 
-                        type="checkbox" 
-                        name="filter" 
-                        value="all"> Yoga</label>
-                    <label><input 
-                        type="checkbox" 
-                        name="filter" 
-                        value="books"> Hikes</label>
-                    <label><input 
-                        type="checkbox" 
-                        name="filter" 
-                        value="movies"> Book clubs</label>
+                <div id="search-filter-window" class="pop-up-window">
+                    <!-- Modal content -->
+                    <div class="pop-up-content">
+                        <div class="pop-up-header">
+                            <button class="close">&times;</button>
+                            <h2 class="centred">Filters</h2>
+                        </div>
+                        <div class="pop-up-body">
+                            <h3>Yoga options</h3>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="all"> Hatha</label>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="all"> Ashtanga</label>
+                            <h3>Hikes</h3>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="books"> Nice hikes</label>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="books"> Challenging hikes</label>                                
+                            <H3>Book clubs</H3>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="movies"> Cool indie books</label>
+                            <label><input 
+                                type="checkbox" 
+                                name="filter" 
+                                value="movies"> Awful self help books</label> 
+                        </div>
+                        <div class="pop-up-footer">
+                            <button class="button-link">Clear filters</h3>
+                            <button class="button-link">Apply filters</h3>
+                        </div>
+                    </div>
                 </div>
+                <!-- search button -->
                 <button onclick="search()" id="search-button">Search</button>
             </div>
 
