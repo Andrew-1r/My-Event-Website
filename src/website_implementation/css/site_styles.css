@@ -50,7 +50,7 @@ body {
 .flex-header img {
     width: 15vw;
     height: auto;
-    padding: 5px;
+    padding: 0 5px;
     min-width: 20px;
     max-width: 20px;}
 .header-icon-wrapper {
@@ -71,26 +71,35 @@ body {
 #burger-menu {
     display: none;
     background-color: whitesmoke;
-    padding: 5px;
-    margin: 5px;
+    padding: 0 5px;
+    margin: 0 5px;
     flex-direction: column;
     color: black;
     text-decoration: none;
     font-weight: 600;
 }
 /* search box, filter button, search button */
-#search-box {
-    width: 200px;
-    padding: 10px;}
-#search-filter-form {
-    display: none;
+.search-area {
+    padding: 150px 0;
+    background-color: antiquewhite;
+    background-size: auto;  
 }
+.search-border {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+#search-box {
+    width: 180px;
+    padding: 10px;}
 /* Pop up window styling */
 .pop-up-window {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -103,6 +112,8 @@ body {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
+    max-height: 80vh;
+    overflow: auto;
     width: 80%;}
 .close {
     color: white;
@@ -119,7 +130,7 @@ body {
 .pop-up-header {
     padding: 2px 16px;
     background-color: var(--lblue);}
-.pop-up-body {padding: 2px 16px;}
+.pop-up-body {padding: 2px 2px;}
 .pop-up-footer {
     background-color: none;
     display: grid;
@@ -135,6 +146,9 @@ body {
         grid-template-columns: repeat(3, 1fr);    }
     .home-link {
         display: flex;    }
+    #search-box {
+        width: 220px;
+        padding: 10px;}
     .col-md-1 {grid-column: span 1;}
     .col-md-2 {grid-column: span 2;}
     .col-md-3 {grid-column: span 3;}
@@ -155,6 +169,13 @@ body {
     }
     .home-link {
         display: flex;
+    }
+    #search-box {
+        width: 300px;
+        padding: 10px;}
+    .search-area {
+        padding: 200px 0;
+        margin: 0 150px;
     }
     .col-lg-1 {grid-column: span 1;}
     .col-lg-2 {grid-column: span 2;}

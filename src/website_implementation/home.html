@@ -66,63 +66,65 @@
             </header>
 
             <!-- search box, filter button, and search button -->
-            <div class="col-12 centred">
-                <!-- search box -->
-                <input 
-                    type="text" 
-                    id="search-box" 
-                    placeholder="Enter an activity or area...">
-                    <!-- search filter form -->
-                <button 
-                    id="search-filter-button"
-                    class="button">Filters
-                </button>
-                <div id="search-filter-window" class="pop-up-window">
-                    <!-- Modal content -->
-                    <div class="pop-up-content">
-                        <div class="pop-up-header">
-                            <button class="close">&times;</button>
-                            <h2 class="centred">Filters</h2>
-                        </div>
-                        <div class="pop-up-body">
-                            <h3>Yoga options</h3>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="all"> Hatha</label>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="all"> Ashtanga</label>
-                            <h3>Hikes</h3>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="books"> Nice hikes</label>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="books"> Challenging hikes</label>                                
-                            <H3>Book clubs</H3>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="movies"> Cool indie books</label>
-                            <label><input 
-                                type="checkbox" 
-                                name="filter" 
-                                value="movies"> Awful self help books</label> 
-                        </div>
-                        <div class="pop-up-footer">
-                            <button class="button">Clear filters</h3>
-                            <button class="button dblue-bg">Apply filters</h3>
+            <div class="col-12 centred search-area">
+                <div class="search-border">
+                    <!-- search box -->
+                    <input 
+                        type="text" 
+                        id="search-box" 
+                        placeholder="Enter an activity or area...">
+                        <!-- search filter form -->
+                    <button 
+                        id="search-filter-button"
+                        class="button">Filters
+                    </button>
+                    <div id="search-filter-window" class="pop-up-window">
+                        <!-- Modal content -->
+                        <div class="pop-up-content">
+                            <div class="pop-up-header">
+                                <button class="close">&times;</button>
+                                <h2 class="centred">Filters</h2>
+                            </div>
+                            <div class="pop-up-body">
+                                <h3>Yoga options</h3>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="all"> Hatha</label>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="all"> Ashtanga</label>
+                                <h3>Hikes</h3>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="books"> Nice hikes</label>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="books"> Challenging hikes</label>                                
+                                <H3>Book clubs</H3>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="movies"> Cool indie books</label>
+                                <label><input 
+                                    type="checkbox" 
+                                    name="filter" 
+                                    value="movies"> Awful self help books</label> 
+                            </div>
+                            <div class="pop-up-footer">
+                                <button class="button">Clear filters</h3>
+                                <button class="button dblue-bg">Apply filters</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- search button -->
-                <button onclick="search()" 
-                id="search-button"
-                class="button dblue-bg">Search</button>
+                    <!-- search button -->
+                    <button onclick="search()" 
+                    id="search-button"
+                    class="button dblue-bg">Search</button>
+                </div>    
             </div>
             <div class="col-12">Item 3</div>
         </div>
