@@ -38,42 +38,44 @@
                 </a>
                 <a
                     href="login.html"
-                    class="button-link"
+                    class="button purple-bg"
                     aria-label="About"
                     aria-current="page">
                     <span>Sign In</span>
                 </a>
                 <div
-                    id="burger-links"
+                    id="burger-menu"
                     role="navigation"
                     aria-labelledby="menuLabel">
                     <a 
                         href="home.html" 
                         aria-label="Search" 
-                        class="nav-link"
+                        class="dropdown-link"
                         >Search</a>
                     <a 
                         href="login.html" 
                         aria-label="Login" 
-                        class="nav-link"
+                        class="dropdown-link"
                         >Login</a>
                     <a
                         href="profile.html"
                         aria-label="My Profile"
-                        class="nav-link"
+                        class="dropdown-link"
                         >My Profile</a>
                 </div>
             </header>
 
-            <div class="col-12">
+            <!-- search box, filter button, and search button -->
+            <div class="col-12 centred">
                 <!-- search box -->
                 <input 
                     type="text" 
                     id="search-box" 
-                    placeholder="Enter an activity, suburb, or state...">
-                <!-- search filter form -->
+                    placeholder="Enter an activity or area...">
+                    <!-- search filter form -->
                 <button 
-                    id="search-filter-button">Filters
+                    id="search-filter-button"
+                    class="button">Filters
                 </button>
                 <div id="search-filter-window" class="pop-up-window">
                     <!-- Modal content -->
@@ -112,15 +114,16 @@
                                 value="movies"> Awful self help books</label> 
                         </div>
                         <div class="pop-up-footer">
-                            <button class="button-link">Clear filters</h3>
-                            <button class="button-link">Apply filters</h3>
+                            <button class="button">Clear filters</h3>
+                            <button class="button dblue-bg">Apply filters</h3>
                         </div>
                     </div>
                 </div>
                 <!-- search button -->
-                <button onclick="search()" id="search-button">Search</button>
+                <button onclick="search()" 
+                id="search-button"
+                class="button dblue-bg">Search</button>
             </div>
-
             <div class="col-12">Item 3</div>
         </div>
         <h1>Home page</h1>

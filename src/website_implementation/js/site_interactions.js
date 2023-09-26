@@ -1,6 +1,6 @@
 //toggles burger menu on click
 function burger_function() {
-    var links = document.getElementById("burger-links");
+    var links = document.getElementById("burger-menu");
     if (links.style.display === "flex") {
         links.style.display = "none";
     } else {
