@@ -1,3 +1,6 @@
+//js testing output
+//document.getElementById("demo").innerHTML = "Hello JavaScript";
+
 //toggles burger menu on click
 function burger_function() {
     var links = document.getElementById("burger-menu");
@@ -17,9 +20,9 @@ function search() {
 }
 
 //search filter form functionality
-var filter_window = document.getElementById("search-filter-window");
-var filter_btn = document.getElementById("search-filter-button");
-var close_btn = document.getElementsByClassName("close")[0];
+const filter_window = document.getElementById("search-filter-window");
+const filter_btn = document.getElementById("search-filter-button");
+const close_btn = document.getElementsByClassName("close")[0];
 //open and close
 filter_btn.onclick = function() {
     filter_window.style.display = "block";
