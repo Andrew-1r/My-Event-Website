@@ -7,11 +7,17 @@
     align-items: center;
     text-align: center;
 }
-.profile-icon-container {
+.profile-icon-container-left {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    justify-items: center;
-    margin: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: right;
+    margin: 0;
+}
+.profile-icon-container-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: left;
+    margin: 0;
 }
 .profile-icons {
     display: flex;
@@ -29,7 +35,7 @@
 #profile-btn {
     margin: 5px;
     min-height: 10vh;
-    min-width: 40vw;
+    min-width: 45vw;
     max-width: 50vw;
 }
 #hidden-description {
@@ -48,6 +54,7 @@
     #profile-btn {
         margin: 5px;
         max-width: 40vw;
+        min-height: 30vh;
     }
     #hidden-description {
         display: block;
@@ -66,7 +73,7 @@
     #profile-btn {
         margin: 5px;
         min-width: 25vw;
-        min-height: 15vh;
+        min-height: 18vh;
         max-width: 25vw;
     }
     #hidden-description {
