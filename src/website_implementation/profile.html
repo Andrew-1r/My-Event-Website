@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Well Done</title>
         <link rel="stylesheet" href="css/site_styles.css" />
+        <link rel="stylesheet" href="css/profile_styles.css" />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +16,105 @@
     </head>
 
     <body>
-        <h1>My profile page</h1>
+        <div class="grid-container">
+            <!-- header start -->
+            <header class="col-12 flex-header" aria-label="Main menu">
+                <a
+                    href="javascript:void(0);"
+                    class="icon nav-link"
+                    aria-label="Toggle main menu"
+                    aria-controls="burger-links"
+                    aria-expanded="false"
+                    onclick="burger_function()">
+                    <div class="header-icon-wrapper">
+                        <img src="media/menu.png">
+                        <span>Menu</span>
+                    </div>
+                </a>
+                <a href="home.html" class="nav-link home-link">
+                    <div class="header-icon-wrapper home-link">
+                        <img src="media/logo.png" alt="Designs" />
+                        <span>welldone.com</span>
+                    </div>
+                </a>
+                <a
+                    href="login.html"
+                    class="button purple-bg"
+                    aria-label="About"
+                    aria-current="page">
+                    <span>Sign In</span>
+                </a>
+                <div
+                    id="burger-menu"
+                    role="navigation"
+                    aria-labelledby="menuLabel">
+                    <a 
+                        href="home.html" 
+                        aria-label="Search" 
+                        class="dropdown-link"
+                        >Search</a>
+                    <a 
+                        href="login.html" 
+                        aria-label="Login" 
+                        class="dropdown-link"
+                        >Login</a>
+                    <a
+                        href="profile.html"
+                        aria-label="My Profile"
+                        class="dropdown-link"
+                        >My Profile</a>
+                </div>
+            </header>
+
+            <div class="col-12 flex-top-row">
+                <h1 class="left-align">Profile</h1>
+                <button id="sign-out-btn" 
+                class="button dblue-bg right-align">
+                    Sign out
+                </button>
+            </div>
+            <div class="profile-icon-container col-12">
+                <button id="profile-btn" class="button col-6 right-align">
+                    <div class="profile-icon-wrapper">
+                        <img src="media/my-profile.png" class="profile-icons">
+                        <h3>My profile</h3>
+                    </div>
+                    <p id="hidden-description">
+                        Create or update your profile.
+                    </p>
+                </button>
+                <button id="profile-btn" class="button col-6">
+                    <div class="profile-icon-wrapper">
+                        <img src="media/my-friends.png" class="profile-icons">
+                        <h3>My friends</h3>
+                    </div>
+                    <p id="hidden-description">
+                        Manage your friends list, talk to friends, invite 
+                        friends to activities, and see what activities your 
+                        friends are doing.
+                    </p>                    
+                </button>
+                <button id="profile-btn" class="button col-6">
+                    <div class="profile-icon-wrapper">
+                        <img src="media/account-settings.png" class="profile-icons">
+                        <h3>Account settings</h3>
+                    </div>
+                    <p id="hidden-description">
+                        Manage your passwords, account settings, 
+                        and privacy settings.
+                    </p>
+                </button>
+                <button id="profile-btn" class="button col-6">
+                    <div class="profile-icon-wrapper">
+                        <img src="media/my-activities.png" class="profile-icons">
+                        <h3>My activities</h3>
+                    </div>
+                    <p id="hidden-description">
+                        Book, cancel, or manage your activites.
+                    </p>
+                </button>              
+            </div>
+        
         <script src="js/site_interactions.js"></script>
     </body>
 </html>
