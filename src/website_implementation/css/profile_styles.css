@@ -11,13 +11,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: right;
-    margin: 0;
 }
 .profile-icon-container-right {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: left;
-    margin: 0;
 }
 .profile-icons {
     display: flex;
@@ -26,6 +24,9 @@
     height: auto;
     width: 6vh;
     margin: 0 15px;
+}
+.profile-text {
+    padding: 0 15px 0 0;
 }
 .profile-icon-wrapper {
     display: flex;
