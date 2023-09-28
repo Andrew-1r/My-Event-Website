@@ -91,10 +91,41 @@
             </form>
             <div class="col-12 centred">
                 <p class="font-600">Don't have an account?</p>
-                <button class="button dblue-bg" onclick="signUp()">
+                <button id="signup-button" class="button dblue-bg">
                 Sign Up!</button>
             </div>
+            <div id="signup-window" class="pop-up-window">
+                <div class="pop-up-content">
+                    <div class="pop-up-header">
+                        <button class="close">&times;</button>
+                        <h2 class="centred">Create an account</h2>
+
+                    </div>
+                    <div class="pop-up-body">
+                        <form id="signupForm" class="col-12 centred">
+                            <p class="centred disclaimer">IMPORTANT: <br>
+                                Do not enter any sensitive information 
+                                into this form. 
+                                <br>
+                            </p>
+                            <label for="username">Desired username:</label>
+                            <br>
+                            <input class="login-input" type="text" 
+                            name="username" id="desired-username" required>
+                            <br>
+                            <label for="password">Desired password:</label>
+                            <br>
+                            <input class="login-input" type="password" 
+                            name="password" id="desired-password" required>
+                            <br>
+                            <button class="button dblue-bg" onclick="submit()">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div> 
-        <script src="js/site_interactions.js"></script>
+        <script src="js/login_interactions.js"></script>
     </body>
 </html>
