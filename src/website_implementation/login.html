@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Well Done</title>
         <link rel="stylesheet" href="css/site_styles.css" />
+        <link rel="stylesheet" href="css/login_styles.css" />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +17,84 @@
     </head>
 
     <body>
-        <h1>Login page</h1>
+        <div class="grid-container">
+            <!-- header start -->
+            <header class="col-12 flex-header" aria-label="Main menu">
+                <a
+                    href="javascript:void(0);"
+                    class="icon nav-link"
+                    aria-label="Toggle main menu"
+                    aria-controls="burger-links"
+                    aria-expanded="false"
+                    onclick="burger_function()">
+                    <div class="header-icon-wrapper">
+                        <img src="media/menu.png" alt="Home" />
+                        <span>Menu</span>
+                    </div>
+                </a>
+                <a href="home.html" class="nav-link home-link">
+                    <div class="header-icon-wrapper home-link">
+                        <img src="media/logo.png" alt="Designs" />
+                        <span>welldone.com</span>
+                    </div>
+                </a>
+                <a
+                    href="login.html"
+                    class="button purple-bg"
+                    aria-label="About"
+                    aria-current="page">
+                    <span>Sign In</span>
+                </a>
+                <div
+                    id="burger-menu"
+                    role="navigation"
+                    aria-labelledby="menuLabel">
+                    <a 
+                        href="home.html" 
+                        aria-label="Search" 
+                        class="dropdown-link"
+                        >Search</a>
+                    <a 
+                        href="login.html" 
+                        aria-label="Login" 
+                        class="dropdown-link"
+                        >Login</a>
+                    <a
+                        href="profile.html"
+                        aria-label="My Profile"
+                        class="dropdown-link"
+                        >My Profile</a>
+                    <a
+                        href="results.html"
+                        aria-label="Search results"
+                        class="dropdown-link"
+                        >Search results</a>
+                </div>
+            </header>
+            <div class="col-12 flex-top-row">
+                <h1 class="left-align">Login</h1>
+            </div>  
+            <form id="loginForm" class="col-12 centred">
+                <label for="username">Username:</label>
+                <br>
+                <input class="login-input" type="text" id="username" 
+                name="username">
+                <br>
+                <label for="password">Password:</label>
+                <br>
+                <input class="login-input" type="password" id="password" 
+                name="password" required>
+                <br>
+                <button class="button dblue-bg" onclick="logIn()">
+                    Log in
+                </button>
+            </form>
+            <div class="col-12 centred">
+                <p class="font-600">Don't have an account?</p>
+                <button class="button dblue-bg" onclick="signUp()">
+                Sign Up!</button>
+            </div>
+        </div> 
         <script src="js/site_interactions.js"></script>
     </body>
 </html>

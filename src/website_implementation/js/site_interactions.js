@@ -69,3 +69,13 @@ function clear_filters() {
     clear_filters()
     console.log(current_filters);
 }
+
+//login
+function logIn() {
+
+}
+
+//sign up
+function signUp() {
+    
+}

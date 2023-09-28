@@ -41,6 +41,25 @@ body {
     background-color: var(--dblue);
     color: white;
 }
+.font-600 {
+    font-weight: 600;
+}
+.font-400 {
+    font-weight: 400;
+}
+.font-300 {
+    font-weight: 600;
+}
+.flex-top-row {
+    flex-shrink: 0;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
 /* header styling */
 .flex-header {
     flex-shrink: 0;
@@ -126,7 +145,8 @@ body {
     .col-lg-11 {grid-column: span 11;}
     .col-lg-12 {grid-column: span 12;}
 }
-/* quick column and margin setup */
+
+/* quick column setup */
 .col-1 {grid-column: span 1;}
 .col-2 {grid-column: span 2;}
 .col-3 {grid-column: span 3;}
@@ -139,17 +159,11 @@ body {
 .col-10 {grid-column: span 10;}
 .col-11 {grid-column: span 11;}
 .col-12 {grid-column: span 12;}
-/* 2% margin on all sides */
+
+/* quick margin setup margin: y-axis x-axis; */
 .m-2 {margin: 2vh 2vw;}
-/* 2% margin left and right */
 .mx-2 {margin: 0 2vw;}
-/* 2% margin up and down */
 .my-2 {margin: 2vh 0vw;}
-/* 2% padding on all sides */
 .p-2 {padding: 2vh 2vw;}
-/* 2% padding left and right */
 .px-2 {padding: 0 2vw;}
-/* 2% padding up and down */
 .py-2 {padding: 2vh 0vw;}
-
-

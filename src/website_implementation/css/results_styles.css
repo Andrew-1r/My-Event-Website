@@ -1,19 +1,8 @@
 /* search box, filter button, search button */
-.search-area {
-    padding: 150px 0;
-    background-image: url('david-tip-s.jpg');
-    background-size: auto;  
-}
-.search-border {
-    border: 2px solid black;
-    display: inline-block;
-    padding: 5px;
-    background-color: white;
-    border-radius: 10px;
-}
 #search-box {
     width: 180px;
-    padding: 10px;}
+    padding: 10px;
+    border-radius: 10px;}
 /* Pop up window styling */
 .pop-up-window {
     display: none;
