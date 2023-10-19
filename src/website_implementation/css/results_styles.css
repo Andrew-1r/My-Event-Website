@@ -6,13 +6,12 @@
 
 /* card styling from 2nd website */
 .card {
-    border: 1px solid var(--green);
+    border: 1px solid;
     border-radius: 10px;
-    box-shadow: 5px 10px 50px var(--purple);
+    /* box-shadow: 5px 10px 50px var(--purple); */
 }
 
 .card-header {
-    color: white;
     font-weight: 600;
     font-size: larger;
 }
@@ -27,5 +26,51 @@
 }
 
 .card-body-text {
+    /* placeholder */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin-left: 2vh;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* .form-group input[type="text"]: */
+
+.form-group textarea {
+    width: 85%;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+
+}
+
+.form-check {
+    margin-bottom: 0.25rem;
+}
+
+.form-check-label {
+    display: inline !important;
+    margin-left: 0.25rem;
+}
+
+
+/* not needed due to using default button
+
+#photo-file-input-label {
+    text-decoration: none;
+    padding: 4px 7px;
+    border-radius: 10px;
+    background-color: var(--dblue);
     color: white;
 }
+
+#photo-file-input {
+    display: none;
+} */

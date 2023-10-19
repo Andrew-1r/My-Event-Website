@@ -3,8 +3,13 @@ const my_website_code = 'Andrew1991'
 const baseURLEvents = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
 const eventsContainer = document.getElementById('events-container');
 
+// not required due to using default button?
+// const photoFileInputLabel = document.getElementById('photo-file-input-label');
+// const photoFileInput = document.getElementById('photo-file-input');
+
 //const functions
 const triggerFileInput = () => {
+    photoFileInput.click();
 };
 
 const handleFileChange = () => {
@@ -50,11 +55,11 @@ const getCommunityEvents = () => {
                 <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
                     <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
                     <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
-                    <p class="card-body-text" p-2">${event.description}</p>
-                    <p class="card-body-text" px-2"><strong>Location:</strong> ${event.location}</p>
-                    <p class="card-body-text" px-2"><strong>Organiser:</strong> ${event.organiser}</p>
-                    <p class="card-body-text" px-2"><strong>Event Type:</strong> ${event.event_type}</p>
-                    <p class="card-body-text" px-2"><strong>Date and Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
+                    <p class="card-body-text p-2">${event.description}</p>
+                    <p class="card-body-text px-2"><strong>Location:</strong> ${event.location}</p>
+                    <p class="card-body-text px-2"><strong>Organiser:</strong> ${event.organiser}</p>
+                    <p class="card-body-text px-2"><strong>Event Type:</strong> ${event.event_type}</p>
+                    <p class="card-body-text px-2"><strong>Date and Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
                 </div>
             </article>
             `;
@@ -69,9 +74,11 @@ const getCommunityEvents = () => {
 };
 
 //event listeners
-photoFileInputLabel.addEventListener('click', triggerFileInput);
-photoFileInput.addEventListener('change', handleFileChange);
 eventForm.addEventListener('submit', handleFormSubmit);
+
+//not required due to using default button?
+// photoFileInputLabel.addEventListener('click', triggerFileInput);
+// photoFileInput.addEventListener('change', handleFileChange);
 
 //setup page on first load
 getCommunityEvents();
