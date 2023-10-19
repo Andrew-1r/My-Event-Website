@@ -3,3 +3,29 @@
     width: 180px;
     padding: 10px;
     border-radius: 10px;}
+
+/* card styling from 2nd website */
+.card {
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 5px 10px 50px var(--purple);
+}
+
+.card-header {
+    color: white;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.card-banner-image {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-body-text {
+    color: white;
+}
