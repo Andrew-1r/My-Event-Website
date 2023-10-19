@@ -6,6 +6,11 @@ const eventsContainer = document.getElementById('events-container');
 // not required due to using default button?
 // const photoFileInputLabel = document.getElementById('photo-file-input-label');
 // const photoFileInput = document.getElementById('photo-file-input');
+const myInput = document.querySelector("#date_time");
+const fp = flatpickr(myInput, {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+});
 
 //const functions
 const triggerFileInput = () => {
