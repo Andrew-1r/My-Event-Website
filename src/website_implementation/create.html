@@ -76,75 +76,29 @@
                         >Create event</a>   
                 </div>
             </header>
-            <!-- search box, filter button, and search button -->
-            <div class="col-12 centred">
-                    <!-- search box -->
-                    <input 
-                        type="text" 
-                        id="search-box" 
-                        placeholder="Enter an activity or area...">
-                    <!-- search filter form -->
-                    <button 
-                        id="search-filter-button"
-                        class="button">Filters
-                    </button>
-                    <div id="search-filter-window" class="pop-up-window">
-                        <div class="pop-up-content">
-                            <div class="pop-up-header">
-                                <button class="close">&times;</button>
-                                <h2 class="centred">Filters</h2>
-                            </div>
-                            <div class="pop-up-body">
-                                <h3>Yoga options</h3>
-                                <label><input 
-                                    id="hatha"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="all">Hatha</label>
-                                <label><input 
-                                    id="ashtanga"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="all">Ashtanga</label>
-                                <h3>Hikes</h3>
-                                <label><input 
-                                    id="nice_hikes"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="books">Nice hikes</label>
-                                <label><input 
-                                    id="challening_hikes"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="books">Challenging hikes</label>                                
-                                <H3>Book clubs</H3>
-                                <label><input 
-                                    id="fiction"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="movies">Fiction</label>
-                                <label><input 
-                                    id="guitar_books"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="movies">Guitar books</label> 
-                            </div>
-                            <div class="pop-up-footer">
-                                <button id="clear-filters-button"
-                                class="button">Clear filters</h3>
-                                <button id="apply-filters-button"
-                                class="button dblue-bg">Apply filters</h3>
+            <section class="flex-main-content main-content" aria-label="Main content">
+                <!-- main content here -->
+                 <div class="grid-container"> <!-- project title -->
+                    <div class="col-12 col-md-12 col-lg-12">
+                    </div>
+                </div>
+                <!-- project content -->
+                <div class="grid-row">
+                    <div class="col-12 col-md-12 col-lg-4"> <!-- project description -->
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-8"> <!-- project demo -->
+                        <div class="grid-container">
+                            <div class="col-12 col-md-12 col-lg-12"> <!-- first part of demo -->
                             </div>
                         </div>
+                        <div class="grid-container" id="events-container"> <!-- second part of demo -->
+                        </div>
                     </div>
-                    <!-- search button -->
-                    <button onclick="search()" 
-                    id="search-button"
-                    class="button dblue-bg">Search</button>   
-            </div>   
+                </div>
+            </section>
             <!-- Events from API -->
             <div class="col-12" id="events-container"> 
-                <h1 class="col-6">Results go here</h1>
+                <h1 class="col-6">events container</h1>
             </div>
         </div>
         <script src="js/site_interactions.js"></script>

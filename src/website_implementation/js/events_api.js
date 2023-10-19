@@ -18,8 +18,6 @@ const handleFormSubmit = event => {
 //     getCommunityEvents();
 // })
 
-
-
 //fetch events from API
 const getCommunityEvents = () => {
     //do i need this?
