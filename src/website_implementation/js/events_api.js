@@ -1,6 +1,7 @@
 const my_website_code = 'Andrew1991'
 
 const baseURLEvents = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
+const postEventMethod = 'POST';
 const eventsContainer = document.getElementById('events-container');
 
 // not required due to using default button?
@@ -21,12 +22,40 @@ const handleFileChange = () => {
 };
 
 const handleFormSubmit = event => {
-};
+    event.preventDefault();
 
-//add to handleFormSubmit function pg 39 APIs_2
-// .then(data => {
-//     getCommunityEvents();
-// })
+    let formData = new FormData(event.target);
+    formData.append("website_code", my_website_code);
+
+    const requestOptions = {
+        method: postEventMethod,
+        body: formData,
+        redirect: 'follow'
+    }
+    
+    fetch(baseURLEvents, requestOptions)
+    .then(response => response.json().then(data => {
+        if (!response.ok) {
+            console.log("Server response:", data);
+            throw new Error("Network response was not ok");
+        }
+        return data;
+    }))
+    .then(data => {
+        console.log(data.description);
+        alert(`Your event "${data.description}" has been submitted successfully!`);
+        eventForm.reset();
+        return data;
+    })
+    .then(data => {
+        getCommunityEvents();
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation', 
+        error.message);
+        alert("Error submitting event. Please try again.");
+    });
+};
 
 //fetch events from API
 const getCommunityEvents = () => {
@@ -74,7 +103,7 @@ const getCommunityEvents = () => {
     .catch(error => {
         console.error("Error processing events:", error.message);
         alert("There was a problem loading events. \
-        Please refgresh the page to try again.");
+        Please refresh the page to try again.");
     });
 };
 
