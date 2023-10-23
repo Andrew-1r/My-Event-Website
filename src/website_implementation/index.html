@@ -6,6 +6,7 @@
         <title>Well Done</title>
         <link rel="stylesheet" href="css/site_styles.css" />
         <link rel="stylesheet" href="css/index_styles.css" />
+        <link rel="stylesheet" href="css/results_styles.css" />
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -96,46 +97,34 @@
                             <div class="pop-up-header">
                                 <button class="close">&times;</button>
                                 <h2 class="centred">Filters</h2>
-                            </div>
+                            </div>                          
                             <div class="pop-up-body">
-                                <h3>Yoga options</h3>
+                                <h3>Event Type:</h3>
                                 <label><input 
-                                    id="hatha"
+                                    id="workshops"
                                     type="checkbox" 
                                     name="filter" 
-                                    value="all">Hatha</label>
+                                    value="all">Workshops</label>
                                 <label><input 
-                                    id="ashtanga"
+                                    id="webinars"
                                     type="checkbox" 
                                     name="filter" 
-                                    value="all">Ashtanga</label>
-                                <h3>Hikes</h3>
+                                    value="all">Webinars</label>
                                 <label><input 
-                                    id="nice_hikes"
+                                    id="seminars"
                                     type="checkbox" 
                                     name="filter" 
-                                    value="books">Nice hikes</label>
+                                    value="all">Seminars</label>
                                 <label><input 
-                                    id="challening_hikes"
+                                    id="group-activities"
                                     type="checkbox" 
                                     name="filter" 
-                                    value="books">Challenging hikes</label>                                
-                                <H3>Book clubs</H3>
-                                <label><input 
-                                    id="fiction"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="movies">Fiction</label>
-                                <label><input 
-                                    id="guitar_books"
-                                    type="checkbox" 
-                                    name="filter" 
-                                    value="movies">Guitar books</label> 
+                                    value="all">Group Actvities</label>                               
                             </div>
                             <div class="pop-up-footer">
                                 <button id="clear-filters-button"
                                 class="button">Clear filters</h3>
-                                <button id="apply-filters-button"
+                                <button onclick="search()" id="apply-filters-button"
                                 class="button dblue-bg">Apply filters</h3>
                             </div>
                         </div>
@@ -144,9 +133,14 @@
                     <button onclick="search()" 
                     id="search-button"
                     class="button dblue-bg">Search</button>
-                </div>    
+                </div>   
             </div>
+                <div class="col-12 col-md-12 col-lg-8">
+                    <div class="grid-container" id="events-container">
+                    </div>
+                </div>   
         </div>
         <script src="js/site_interactions.js"></script>
+        <script src="js/results_interactions.js"></script>
     </body>
 </html>
