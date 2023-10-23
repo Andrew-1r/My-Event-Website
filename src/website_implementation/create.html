@@ -84,116 +84,101 @@
             </div>
 
             <!-- project content -->
-
-                <div class="col-12 col-md-12 col-lg-4"> <!-- project description -->
-                    <p>Please be as descriptive as you can with your event.</p>
-                    <p>Events will be moderated and posted by our staff.</p>
-                </div>
-                <div class="col-12 col-md-12 col-lg-8"> <!-- project demo -->
-
-                        <div class="col-12 col-md-12 col-lg-12"> <!-- first part of demo -->
-                            <div class="card" role="group" aria-labelledby="card-form-title" aria-describedby="card-form-desc">
-                                <h2 class="card-header m-2" id="card-form-title">Submit a new event!</h2>
-                                <p class="card-body-text p-2" id="card-form-desc">Use this form to send a new event to our organisers to be added to our registry.</p>
-
-                                <form id="eventForm" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label for="name">Event Name:</label>
-                                        <input type="text" 
-                                        id="name" 
-                                        name="name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="location">Location:</label>
-                                        <input type="text" 
-                                        id="location" 
-                                        name="location" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="organiser">Organiser:</label>
-                                        <input type="text" 
-                                        id="organiser" 
-                                        name="organiser" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Event Type:</label>
-                                        <div class="form-check">
-                                            <input class="form-check-input" 
-                                            type="radio" name="event_type" 
-                                            id="workshop" value="Workshop"
-                                            required>
-                                            <label class="form-check-label"
-                                            for="workshop">Workshop</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" 
-                                            type="radio" name="event_type" 
-                                            id="seminar" value="Seminar"
-                                            required>
-                                            <label class="form-check-label"
-                                            for="seminar">Seminar</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" 
-                                            type="radio" name="event_type" 
-                                            id="groupActivity" value="Group Activity"
-                                            required>
-                                            <label class="form-check-label"
-                                            for="groupActivity">Group Activity</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" 
-                                            type="radio" name="event_type" 
-                                            id="webinar" value="Webinar"
-                                            required>
-                                            <label class="form-check-label"
-                                            for="webinar">Webinar</label>
-                                        </div>                                                                                                                        
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="description">Description:</label>
-                                        <textarea id="description" 
-                                        name="description" rows="4" 
-                                        required></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="date_time">Date and Time:</label>
-                                        <input type="text" 
-                                        id="date_time" 
-                                        name="date_time" 
-                                        placeholder="e.g. 2023-05-31 14:30" 
-                                        required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="photo"
-                                        id="photo-file-input-label"
-                                        class="p-1">Add a photo (Optional):</label>
-                                        <input type="file"
-                                        name="photo"
-                                        id="photo-file-input" 
-                                        accept="image/*"
-                                        capture="camera">
-                                        <span id="selected-file-name"></span>
-                                    </div>
-                                    <input class="button dblue-bg m-2" type="submit"
-                                    value="Submit Event">  
-                                </form>
+            <div class="col-12 col-md-12 col-lg-4"> <!-- project description -->
+                <p>Please be as descriptive as you can with your event.</p>
+                <p>Events will be moderated and posted by our staff.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-8"> <!-- project demo -->
+                <div class="col-12 col-md-12 col-lg-12"> <!-- first part of demo -->
+                    <div class="card" role="group" aria-labelledby="card-form-title" aria-describedby="card-form-desc">
+                        <h2 class="card-header m-2" id="card-form-title">Submit a new event!</h2>
+                        <p class="card-body-text p-2" id="card-form-desc">Use this form to send a new event to our organisers to be added to our registry.</p>
+                        <form id="eventForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name">Event Name:</label>
+                                <input type="text" 
+                                id="name" 
+                                name="name" required>
                             </div>
-                        </div>
-                        Workshop
-
-                        Seminar
-                        
-                        Group Activity
-                        
-                        Webinar
-                    <div class="grid-container" id="events-container"> <!-- second part of demo -->
+                            <div class="form-group">
+                                <label for="location">Location:</label>
+                                <input type="text" 
+                                id="location" 
+                                name="location" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="organiser">Organiser:</label>
+                                <input type="text" 
+                                id="organiser" 
+                                name="organiser" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Event Type:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" 
+                                    type="radio" name="event_type" 
+                                    id="workshop" value="Workshop"
+                                    required>
+                                    <label class="form-check-label"
+                                    for="workshop">Workshop</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" 
+                                    type="radio" name="event_type" 
+                                    id="seminar" value="Seminar"
+                                    required>
+                                    <label class="form-check-label"
+                                    for="seminar">Seminar</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" 
+                                    type="radio" name="event_type" 
+                                    id="groupActivity" value="Group Activity"
+                                    required>
+                                    <label class="form-check-label"
+                                    for="groupActivity">Group Activity</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" 
+                                    type="radio" name="event_type" 
+                                    id="webinar" value="Webinar"
+                                    required>
+                                    <label class="form-check-label"
+                                    for="webinar">Webinar</label>
+                                </div>                                                                                                                        
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea id="description" 
+                                name="description" rows="4" 
+                                required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="date_time">Date and Time:</label>
+                                <input type="text" 
+                                id="date_time" 
+                                name="date_time" 
+                                placeholder="e.g. 2023-05-31 14:30" 
+                                required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo"
+                                id="photo-file-input-label"
+                                class="p-1">Add a photo (Optional):</label>
+                                <input type="file"
+                                name="photo"
+                                id="photo-file-input" 
+                                accept="image/*"
+                                capture="camera">
+                                <span id="selected-file-name"></span>
+                            </div>
+                            <input class="button dblue-bg m-2" type="submit"
+                            value="Submit Event">  
+                        </form>
                     </div>
                 </div>
-
-            <!-- Events from API -->
-            <div class="col-12" id="events-container"> 
-                <h1 class="col-6">events container</h1>
+                <div class="grid-container" id="events-container"> <!-- second part of demo -->
+                </div>
             </div>
         </div>
         <script src="js/site_interactions.js"></script>
