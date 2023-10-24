@@ -26,11 +26,47 @@ const getCommunityEvents = () => {
         return response.json()
     })
     .then(events => {
-        console.log(events);
+        //Filter events
+        const filteredEvents = [];
+        console.log("Current filters:", current_filters);
+        console.log("Filtered events:", filteredEvents);
+
+        events.forEach(event => {
+            if (event.event_type === "Workshop") {
+              console.log("This is a workshop event.");
+              if (current_filters.workshops === event.event_type) {
+                console.log("Workshop added")
+                filteredEvents.push(event);
+              };
+            } else if (event.event_type === "Webinar") {
+              console.log("This is a webinar event.");
+              if (current_filters.webinars === event.event_type) {
+                console.log("Webinar added")
+                filteredEvents.push(event);
+              };
+            } else if (event.event_type === "Seminar") {
+                console.log("This is a seminar event.");
+                if (current_filters.seminars === event.event_type) {
+                    console.log("Seminar added")
+                    filteredEvents.push(event);
+                  };
+            } else if (event.event_type === "Group Activity") {
+                console.log("This is a group activity event.");
+                if (current_filters.group_activities === event.event_type) {
+                    console.log("Group activity added")
+                    filteredEvents.push(event);
+                  };              
+            }
+          });
+        
+        console.log("New filtered events: ", filteredEvents)
+
+        //Populate events
+        console.log("Events:", events);
         while (eventsContainer.firstChild) {
             eventsContainer.removeChild(eventsContainer.firstChild);
         }
-        events.forEach(event => {
+        filteredEvents.forEach(event => {
             const eventTemplate = `
             <article class="col-12 col-md-12 col-lg-6">
                 <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
@@ -60,7 +96,12 @@ const filter_btn = document.getElementById("search-filter-button");
 const close_btn = document.getElementsByClassName("close")[0];
 const apply_filters_btn = document.getElementById("apply-filters-button");
 const clear_filters_btn = document.getElementById("clear-filters-button");
-let current_filters = {};
+let current_filters = {
+    workshops: document.getElementById('workshops').checked = "Workshop",
+    webinars: document.getElementById('webinars').checked = "Webinar",  
+    seminars: document.getElementById('seminars').checked = "Seminar",
+    group_activities: document.getElementById('group-activities').checked = "Group Activity",  
+};
 
 filter_btn.onclick = function() {
     filter_window.style.display = "block";
@@ -82,11 +123,11 @@ window.onclick = function(event) {
 }
 //apply filters 
 function update_filters() {
-    current_filters ={
-        workshops: document.getElementById('workshops').checked,
-        webinars: document.getElementById('webinars').checked,  
-        seminars: document.getElementById('seminars').checked,
-        group_activities: document.getElementById('group-activities').checked,  
+    current_filters = {
+        workshops: document.getElementById('workshops').checked ? "Workshop" : "False",
+        webinars: document.getElementById('webinars').checked ? "Webinar" : "False",
+        seminars: document.getElementById('seminars').checked ? "Seminar" : "False",
+        group_activities: document.getElementById('group-activities').checked ? "Group Activity" : "False"
     };
 }
   apply_filters_btn.onclick = function() {
@@ -98,15 +139,16 @@ function update_filters() {
 //clear filters
 function clear_filters() {
     filter_window.style.display = "none";
-    current_filters ={
-        workshops: document.getElementById('workshops').checked = true,
-        webinars: document.getElementById('webinars').checked = true,  
-        seminars: document.getElementById('seminars').checked = true,
-        group_activities: document.getElementById('group-activities').checked = true,   
+    current_filters = {
+        workshops: document.getElementById('workshops').checked = "Workshop",
+        webinars: document.getElementById('webinars').checked = "Webinar",  
+        seminars: document.getElementById('seminars').checked = "Seminar",
+        group_activities: document.getElementById('group-activities').checked = "Group Activity",  
     };
 }
   clear_filters_btn.onclick = function() {
     clear_filters()
+    search()
 }
 
 //javascript search button no search logic / functionality yet 
