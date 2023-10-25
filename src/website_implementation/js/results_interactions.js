@@ -3,6 +3,8 @@ const my_website_code = 'Andrew1991'
 const baseURLEvents = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
 const postEventMethod = 'POST';
 const eventsContainer = document.getElementById('events-container');
+let event_list;
+
 
 //fetch events from API
 const getCommunityEvents = () => {
@@ -26,32 +28,28 @@ const getCommunityEvents = () => {
         return response.json()
     })
     .then(events => {
+        event_list = events;
         //Filter events
         const filteredEvents = [];
         console.log("Current filters:", current_filters);
-        console.log("Filtered events:", filteredEvents);
 
         events.forEach(event => {
             if (event.event_type === "Workshop") {
-              console.log("This is a workshop event.");
               if (current_filters.workshops === event.event_type) {
                 console.log("Workshop added")
                 filteredEvents.push(event);
               };
             } else if (event.event_type === "Webinar") {
-              console.log("This is a webinar event.");
               if (current_filters.webinars === event.event_type) {
                 console.log("Webinar added")
                 filteredEvents.push(event);
               };
             } else if (event.event_type === "Seminar") {
-                console.log("This is a seminar event.");
                 if (current_filters.seminars === event.event_type) {
                     console.log("Seminar added")
                     filteredEvents.push(event);
                   };
             } else if (event.event_type === "Group Activity") {
-                console.log("This is a group activity event.");
                 if (current_filters.group_activities === event.event_type) {
                     console.log("Group activity added")
                     filteredEvents.push(event);
@@ -59,7 +57,7 @@ const getCommunityEvents = () => {
             }
           });
         
-        console.log("New filtered events: ", filteredEvents)
+        console.log("Filtered events: ", filteredEvents)
 
         //Populate events
         console.log("Events:", events);
@@ -68,7 +66,7 @@ const getCommunityEvents = () => {
         }
         filteredEvents.forEach(event => {
             const eventTemplate = `
-            <article class="col-12 col-md-12 col-lg-6">
+            <article class="col-12 col-md-12 col-lg-6" data-eventid=${event.id}>
                 <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
                     <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
                     <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
@@ -151,13 +149,32 @@ function clear_filters() {
     search()
 }
 
-//javascript search button no search logic / functionality yet 
-// - need to update to hold output from filter form
 function search() {
     const search_value = document.getElementById("search-box").value;
 
-    //future search logic goes here, e.g. combine search terms and filter  
     console.log(current_filters);
     console.log(search_value);
     getCommunityEvents();
 }
+
+//for individual event pages
+document.addEventListener('DOMContentLoaded', () => {
+    eventsContainer.addEventListener('click', function(event) {
+        let target = event.target;
+        while (target && !target.classList.contains('card')) {
+            target = target.parentElement;
+        }
+
+        if (target) {
+            //doesn't get anything not sure aht attribute to put on
+            const eventID = target.getAttribute('data-eventid')
+            //testing / debugging
+            console.log('target: ', target)
+
+            sessionStorage.setItem('eventHTML', target.outerHTML);
+
+            window.location.href = 'event.html';
+
+        }
+    })
+})
