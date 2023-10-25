@@ -7,6 +7,12 @@ body {
     font-family: 'Poppins', sans-serif;
    }
 
+#emergency-button {
+    background-color: orange;
+    padding: 100px;
+    font-size: 26px;
+}
+
 h1 {
     color: #379EA8;
     font-weight: 300;
