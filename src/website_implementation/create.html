@@ -13,9 +13,13 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
             rel="stylesheet"/>
+        
         <!-- flatpickr date picker from flatpickr.js.org -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <!-- all images sourced from https://unsplash.com/ with artist name as the filename -->
+        <!-- all icons sourced from https://icons8.com/ -->
     </head>
 
     <body>
@@ -73,21 +77,21 @@
                         >Create event</a>   
                 </div>
             </header>
-            <!-- main content -->
+            <!-- page title -->
             <div class="col-12 col-md-12 col-lg-12"> <!-- project title -->
                 <h1>Create an event</h1> 
             </div>
-
-            <!-- project content -->
-            <div class="col-12 col-md-12 col-lg-4"> <!-- project description -->
-                <p>Please be as descriptive as you can with your event.</p>
-                <p>Events will be moderated and posted by our staff.</p>
+            <!-- create event descripter -->
+            <div class="col-12 col-md-12 col-lg-4"> 
+                <p>Thank you for posting your event! We can't wait to hear about it.</p>
+                <p>Please find some examples of events below this form.</p>
             </div>
-            <div class="col-12 col-md-12 col-lg-8"> <!-- project demo -->
-                <div class="col-12 col-md-12 col-lg-12"> <!-- first part of demo -->
+            <!-- create event form -->
+            <div class="col-12 col-md-12 col-lg-8">
+                <div class="col-12 col-md-12 col-lg-12">
                     <div class="card" role="group" aria-labelledby="card-form-title" aria-describedby="card-form-desc">
-                        <h2 class="card-header m-2" id="card-form-title">Submit a new event!</h2>
-                        <p class="card-body-text p-2" id="card-form-desc">Use this form to send a new event to our organisers to be added to our registry.</p>
+                        <h2 class="form-group" id="card-form-title">Submit a new event</h2>
+                        <br>
                         <form id="eventForm" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name">Event Name:</label>
@@ -172,8 +176,7 @@
                         </form>
                     </div>
                 </div>
-                <!-- events from the api -->
-                
+                <!-- created events -->
                 <div class="grid-container" id="events-container"> 
                 </div>
             </div>

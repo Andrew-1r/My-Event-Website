@@ -12,12 +12,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
-            rel="stylesheet" />
+            rel="stylesheet"/>
+
+        <!-- all images sourced from https://unsplash.com/ with artist name as the filename -->
+        <!-- all icons sourced from https://icons8.com/ -->
     </head>
 
     <body>
         <div class="grid-container">
-            <!-- header start -->
+            <!-- header -->
             <header class="col-12 flex-header" aria-label="Main menu">
                 <a
                     href="javascript:void(0);"
@@ -70,10 +73,11 @@
                         >Create event</a>   
                 </div>
             </header>
+            <!-- page title -->
             <div class="col-12 flex-top-row">
                 <h1 class="left-align">Home</h1>
             </div>  
-            <!-- search box, filter button, and search button -->
+            <!-- search box and buttons -->
             <div class="col-12 centred search-area">
                 <div class="search-border">
                     <!-- search box -->
@@ -129,10 +133,10 @@
                     class="button dblue-bg">Search</button>
                 </div>   
             </div>
-                <div class="col-12 col-md-12 col-lg-8">
-                    <div class="grid-container" id="events-container">
-                    </div>
-                </div>   
+            <!-- event cards from search -->
+            <div class="grid-container col-12 col-md-12 col-lg-8" id="events-container">
+
+            </div>   
         </div>
         <script src="js/site_interactions.js"></script>
         <script src="js/index_interactions.js"></script>

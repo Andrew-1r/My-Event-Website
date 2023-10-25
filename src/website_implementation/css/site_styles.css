@@ -6,7 +6,8 @@
     --purple: #5928ed;}
 /* general styles and setup */
 body {
-    font-family: "Open Sans", sans-serif;}
+    font-family: "Open Sans", sans-serif;
+}
 .grid-container {
     display: grid;
     grid-auto-flow: row;
@@ -28,7 +29,8 @@ body {
 .button {
     text-decoration: none;
     padding: 4px 7px;
-    border-radius: 10px;}
+    border-radius: 10px;
+}
 .purple-bg {
     background-color: var(--purple);
     color: white;
@@ -59,7 +61,6 @@ body {
     align-items: center;
     text-align: center;
 }
-
 /* header styling */
 .flex-header {
     flex-shrink: 0;
@@ -70,21 +71,25 @@ body {
     justify-items: center;
     align-items: center;
     padding: 1vh 5vw;
-    text-align: center;}
+    text-align: center;
+}
 .flex-header img {
     width: 15vw;
     height: auto;
     padding: 0 5px;
     min-width: 20px;
-    max-width: 20px;}
+    max-width: 20px;
+}
 .header-icon-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+}
 .nav-link {
     color: black;
     text-decoration: none;
-    font-weight: 600;}
+    font-weight: 600;
+}
 .dropdown-link {
     color: black;
     text-decoration: none;
@@ -92,7 +97,8 @@ body {
     padding: 5px;
 }    
 .home-link {
-    display: none;}
+    display: none;
+}
 #burger-menu {
     display: none;
     background-color: whitesmoke;
@@ -103,7 +109,6 @@ body {
     text-decoration: none;
     font-weight: 600;
 }
-
 /* Pop up window styling for login/signup and search filter */
 .pop-up-window {
     display: none;
@@ -115,7 +120,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);}
+    background-color: rgba(0,0,0,0.4);
+}
 .pop-up-content {
     position: relative;
     background-color: #fefefe;
@@ -124,23 +130,28 @@ body {
     border: 1px solid #888;
     max-height: 80vh;
     overflow: auto;
-    width: 80%;}
+    width: 80%;
+}
 .close {
     color: white;
     background: none;
     border: none;
     float: right;
     font-size: 28px;
-    font-weight: bold;}
+    font-weight: bold;
+}
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
-    cursor: pointer;}
+    cursor: pointer;
+}
 .pop-up-header {
     padding: 2px 16px;
-    background-color: var(--lblue);}
-.pop-up-body {padding: 2px 2px;}
+    background-color: var(--lblue);
+}
+.pop-up-body {padding: 2px 2px;
+}
 .pop-up-footer {
     background-color: none;
     display: grid;
@@ -150,7 +161,6 @@ body {
     padding: 2vh 5vw;
     text-align: center;;
 }
-
 /* search box styling */
 .search-area {
     padding: 150px 0;
@@ -167,13 +177,12 @@ body {
 #search-box {
     width: 180px;
     padding: 10px;
-    border-radius: 10px;}
-
+    border-radius: 10px;
+}
 /* login page styling */
 .login-input {
     margin-bottom: 10px;
 }
-
 /* quick column setup */
 .col-1 {grid-column: span 1;}
 .col-2 {grid-column: span 2;}
@@ -187,11 +196,11 @@ body {
 .col-10 {grid-column: span 10;}
 .col-11 {grid-column: span 11;}
 .col-12 {grid-column: span 12;}
-
 /* quick margin setup margin: y-axis x-axis; */
 .m-2 {margin: 2vh 2vw;}
 .mx-2 {margin: 0 2vw;}
 .my-2 {margin: 2vh 0vw;}
+.p-1 {padding: 1vh 1vw;}
 .p-2 {padding: 2vh 2vw;}
 .px-2 {padding: 0 2vw;}
 .py-2 {padding: 2vh 0vw;}
@@ -199,7 +208,8 @@ body {
 /* Landscape phones and tablets */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
     .flex-header {
-        grid-template-columns: repeat(3, 1fr);    }
+        grid-template-columns: repeat(3, 1fr);    
+    }
     .home-link {
         display: flex;    
     }

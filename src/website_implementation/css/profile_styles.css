@@ -1,3 +1,4 @@
+/* profile button styling */
 .profile-icon-container-left {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -38,8 +39,7 @@
 .start-6 {
     grid-column-start: 6;
 }
-
-/* Landscape phones and tablets */
+/* landscape phones and tablets */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
     #profile-btn {
         margin: 5px;
@@ -57,8 +57,7 @@
         margin: 5px 0 0 0;
     }
 }
-
-/* Desktop */
+/* desktop */
 @media only screen and (min-width: 992px) {
     #profile-btn {
         margin: 5px;
@@ -76,7 +75,4 @@
     .profile-icon-wrapper {
         margin: 5px 0 0 0;
     }
-    /* .profile-icon-container {
-        justify-items: right;
-    } */
 }
