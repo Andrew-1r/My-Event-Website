@@ -79,15 +79,17 @@ const getCommunityEvents = () => {
         events.forEach(event => {
             const eventTemplate = `
             <article class="col-12 col-md-12 col-lg-6" data-eventid=${event.id}>
-                <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
-                    <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
-                    <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
-                    <p class="card-body-text p-2">${event.description}</p>
-                    <p class="card-body-text px-2"><strong>Location:</strong> ${event.location}</p>
-                    <p class="card-body-text px-2"><strong>Organiser:</strong> ${event.organiser}</p>
-                    <p class="card-body-text px-2"><strong>Event Type:</strong> ${event.event_type}</p>
-                    <p class="card-body-text px-2"><strong>Date and Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
-                </div>
+                <button class="card-button">
+                    <div class="card" role="group" aria-labelledby="card${event.id}-title" aria-describedby="card${event.id}-desc">
+                        <h2 class="card-header p-2" id="card${event.id}-title">${event.name}</h2>
+                        <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
+                        <p class="card-body-text p-2">${event.description}</p>
+                        <p class="card-body-text px-2"><strong>Location:</strong> ${event.location}</p>
+                        <p class="card-body-text px-2"><strong>Organiser:</strong> ${event.organiser}</p>
+                        <p class="card-body-text px-2"><strong>Event Type:</strong> ${event.event_type}</p>
+                        <p class="card-body-text px-2"><strong>Date and Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
+                    </div>
+                    </button>
             </article>
             `;
             eventsContainer.innerHTML += eventTemplate;
