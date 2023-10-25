@@ -29,7 +29,7 @@ const getCommunityEvents = () => {
     })
     .then(events => {
         event_list = events;
-        //Filter events
+        //filter events
         const filteredEvents = [];
         console.log("Current filters:", current_filters);
 
@@ -59,7 +59,7 @@ const getCommunityEvents = () => {
         
         console.log("Filtered events: ", filteredEvents)
 
-        //Populate events
+        //populate events
         console.log("Events:", events);
         while (eventsContainer.firstChild) {
             eventsContainer.removeChild(eventsContainer.firstChild);
@@ -88,7 +88,7 @@ const getCommunityEvents = () => {
     });
 };
 
-//search filter form open and close
+//search filter form visibility
 const filter_window = document.getElementById("search-filter-window");
 const filter_btn = document.getElementById("search-filter-button");
 const close_btn = document.getElementsByClassName("close")[0];
@@ -113,13 +113,14 @@ filter_btn.onclick = function() {
 close_btn.onclick = function() {
     filter_window.style.display = "none";
 }
-//close if user clicks off form
+//close window if user clicks off the form
 window.onclick = function(event) {
   if (event.target == filter_window) {
     filter_window.style.display = "none";
   }
 }
-//apply filters 
+
+//filter and search buttons
 function update_filters() {
     current_filters = {
         workshops: document.getElementById('workshops').checked ? "Workshop" : "False",
@@ -133,8 +134,7 @@ function update_filters() {
     filter_window.style.display = "none";
     search()
 }
-    
-//clear filters
+
 function clear_filters() {
     filter_window.style.display = "none";
     current_filters = {
@@ -157,7 +157,7 @@ function search() {
     getCommunityEvents();
 }
 
-//for individual event pages
+//individual event pages functionality
 document.addEventListener('DOMContentLoaded', () => {
     eventsContainer.addEventListener('click', function(event) {
         let target = event.target;

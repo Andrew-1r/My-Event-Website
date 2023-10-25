@@ -1,26 +1,20 @@
+//event api variables
 const my_website_code = 'Andrew1991'
-
 const baseURLEvents = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
 const postEventMethod = 'POST';
 const eventsContainer = document.getElementById('events-container');
 
-// not required due to using default button?
-// const photoFileInputLabel = document.getElementById('photo-file-input-label');
-// const photoFileInput = document.getElementById('photo-file-input');
+//flatpickr date and time variables
 const myInput = document.querySelector("#date_time");
 const fp = flatpickr(myInput, {
     enableTime: true,
     dateFormat: "Y-m-d H:i",
 });
 
-//const functions
+//functions for event submission form
 const triggerFileInput = () => {
     photoFileInput.click();
 };
-
-const handleFileChange = () => {
-};
-
 const handleFormSubmit = event => {
     event.preventDefault();
 
@@ -57,9 +51,8 @@ const handleFormSubmit = event => {
     });
 };
 
-//fetch events from API
+//fetch submitted events from API
 const getCommunityEvents = () => {
-    //do i need this?
     const queryParams = {
         website_code: my_website_code,
     }
@@ -110,9 +103,5 @@ const getCommunityEvents = () => {
 //event listeners
 eventForm.addEventListener('submit', handleFormSubmit);
 
-//not required due to using default button?
-// photoFileInputLabel.addEventListener('click', triggerFileInput);
-// photoFileInput.addEventListener('change', handleFileChange);
-
-//setup page on first load
+//setup submitted events on first load
 getCommunityEvents();

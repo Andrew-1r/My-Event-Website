@@ -1,4 +1,4 @@
-//toggles burger menu on click
+//toggles burger menu visibility on click
 function burger_function() {
     var links = document.getElementById("burger-menu");
     if (links.style.display === "flex") {
@@ -8,18 +8,7 @@ function burger_function() {
     }
 }
 
-//login
-function logIn() {
-
-}
-
-//submit
-function submit() {
-
-}
-
-
-//sign up
+//sign up form toggle visibility
 const signup_window = document.getElementById("signup-window");
 const signup_btn = document.getElementById("signup-button");
 const close_btn = document.getElementsByClassName("close")[0];

@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Retrieve the stored HTML from sessionStorage
+    //retrives eventHTML from session storage
     const eventHTML = sessionStorage.getItem('eventHTML');
 
         if (eventHTML) {
-            // Insert the HTML into the DOM
+            //if eventHTML is in session storage then find events container
             const targetDiv = document.getElementById('events-container');
 
         if (targetDiv) {
-            // Insert the HTML into the div container
+            //if we find events container then insert eventHTML into it
             targetDiv.insertAdjacentHTML('beforeend', eventHTML);
         }
     }
