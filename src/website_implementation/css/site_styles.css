@@ -104,7 +104,7 @@ body {
     font-weight: 600;
 }
 
-/* Pop up window styling */
+/* Pop up window styling for login/signup and search filter */
 .pop-up-window {
     display: none;
     position: fixed;
@@ -149,6 +149,29 @@ body {
     align-items: center;
     padding: 2vh 5vw;
     text-align: center;;
+}
+
+/* search box styling */
+.search-area {
+    padding: 150px 0;
+    background-image: url('david-tip-s.jpg');
+    background-size: auto;  
+}
+.search-border {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+#search-box {
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;}
+
+/* login page styling */
+.login-input {
+    margin-bottom: 10px;
 }
 
 /* quick column setup */
