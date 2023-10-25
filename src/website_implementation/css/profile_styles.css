@@ -1,4 +1,8 @@
 /* profile button styling */
+.h3-style {
+    font-size: 1.17em;
+    font-weight: bold;
+}
 .profile-icon-container-left {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -25,15 +29,18 @@
     align-items: center;
     justify-content: left;
 }
-#profile-btn {
+.profile-btn {
     margin: 5px;
     min-height: 10vh;
     min-width: 45vw;
     max-width: 50vw;
+    text-decoration: none;
+    padding: 4px 7px;
+    border-radius: 10px;
 }
-#hidden-description {
+.hidden-description {
     text-align: left;
-    padding: 0 0 0 15px;
+    padding: 10px 0 0 15px;
     display: none;
 }
 .start-6 {
@@ -41,12 +48,12 @@
 }
 /* landscape phones and tablets */
 @media only screen and (min-width: 601px) and (max-width: 992px) {
-    #profile-btn {
+    .profile-btn {
         margin: 5px;
         max-width: 40vw;
         min-height: 35vh;
     }
-    #hidden-description {
+    .hidden-description {
         display: block;
     }
     .profile-icons {
@@ -59,13 +66,13 @@
 }
 /* desktop */
 @media only screen and (min-width: 992px) {
-    #profile-btn {
+    .profile-btn {
         margin: 5px;
         min-width: 25vw;
         min-height: 18vh;
         max-width: 25vw;
     }
-    #hidden-description {
+    .hidden-description {
         display: block;
     }
     .profile-icons {

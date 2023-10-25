@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Well Done</title>
-        <link rel="stylesheet" href="css/site_styles.css" />
-        <link rel="stylesheet" href="css/profile_styles.css" />
+        <link rel="stylesheet" href="css/site_styles.css">
+        <link rel="stylesheet" href="css/profile_styles.css">
 
         <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
-            rel="stylesheet" />
+            rel="stylesheet">
 
         <!-- all images sourced from https://unsplash.com/ with artist name as the filename -->
         <!-- all icons sourced from https://icons8.com/ -->
@@ -20,37 +20,37 @@
 
     <body>
         <div class="grid-container">
-            <!-- header start -->
+            <!-- header -->
             <header class="col-12 flex-header" aria-label="Main menu">
                 <a
                     href="javascript:void(0);"
                     class="icon nav-link"
                     aria-label="Toggle main menu"
-                    aria-controls="burger-links"
+                    aria-controls="burger-menu"
                     aria-expanded="false"
                     onclick="burger_function()">
                     <div class="header-icon-wrapper">
-                        <img src="media/menu.png" alt="Home" />
+                        <img src="media/menu.png" alt="Home">
                         <span>Menu</span>
                     </div>
                 </a>
                 <a href="index.html" class="nav-link home-link">
                     <div class="header-icon-wrapper home-link">
-                        <img src="media/logo.png" alt="Designs" />
+                        <img src="media/logo.png" alt="Designs">
                         <span>welldone.com</span>
                     </div>
                 </a>
                 <a
                     href="login.html"
                     class="button purple-bg"
-                    aria-label="About"
-                    aria-current="page">
+                    aria-label="Sign In">
                     <span>Sign In</span>
                 </a>
                 <div
                     id="burger-menu"
                     role="navigation"
                     aria-labelledby="menuLabel">
+                <span id="menuLabel" class="hidden">Main Navigation</span>
                     <a 
                         href="index.html" 
                         aria-label="Search" 
@@ -68,7 +68,7 @@
                         >My Profile</a>
                     <a
                         href="create.html"
-                        aria-label="Search results"
+                        aria-label="Create event"
                         class="dropdown-link"
                         >Create event</a>   
                 </div>
@@ -83,51 +83,55 @@
             </div>
             <!-- profile buttons left (not functional) -->
             <div class="profile-icon-container-left col-6">
-                <button id="profile-btn" class="button col-6 right-align">
-                    <div class="profile-icon-wrapper">
-                        <img src="media/my-profile.png" class="profile-icons">
-                        <h3 class="profile-text">My profile</h3>
-                    </div>
-                    <p id="hidden-description">
+                <button class="profile-btn col-6">
+                    <span class="profile-icon-wrapper">
+                        <img src="media/my-profile.png" 
+                        alt="An icon of a person" class="profile-icons">
+                        <span class="profile-text h3-style">My profile</span>
+                    </span>
+                    <span class="hidden-description">
                         Add or manage your profile photo, description, 
                         and interests.
-                    </p>
+                    </span>
                 </button>
-                <button id="profile-btn" class="button col-6">
-                    <div class="profile-icon-wrapper">
-                        <img src="media/my-friends.png" class="profile-icons">
-                        <h3 class="profile-text">My friends</h3>
-                    </div>
-                    <p id="hidden-description">
+                <button class="profile-btn col-6">
+                    <span class="profile-icon-wrapper">
+                        <img src="media/my-friends.png" 
+                        alt="An icon of two friends" class="profile-icons">
+                        <span class="profile-text h3-style">My friends</span>
+                    </span>
+                    <span class="hidden-description">
                         Manage your friends list, invite 
                         friends to activities, and see your 
                         friends activities.
-                    </p>                    
+                    </span>
+                </button>                    
             </div>
             <!-- profile buttons right (not functional) -->
             <div class="profile-icon-container-right col-6">
-                </button>
-                <button id="profile-btn" class="button col-6">
-                    <div class="profile-icon-wrapper">
-                        <img src="media/account-settings.png" class="profile-icons">
-                        <h3 class="profile-text">Account settings</h3>
-                    </div>
-                    <p id="hidden-description">
+                <button class="profile-btn col-6">
+                    <span class="profile-icon-wrapper">
+                        <img src="media/account-settings.png" 
+                        alt="An icon of a gear" class="profile-icons">
+                        <span class="profile-text h3-style">Account settings</span>
+                    </span>
+                    <span class="hidden-description">
                         Manage your passwords, account settings, 
                         and privacy settings.
-                    </p>
+                    </span>
                 </button>
-                <button id="profile-btn" class="button col-6">
-                    <div class="profile-icon-wrapper">
-                        <img src="media/my-activities.png" class="profile-icons">
-                        <h3 class="profile-text">My activities</h3>
-                    </div>
-                    <p id="hidden-description">
+                <button class="profile-btn col-6">
+                    <span class="profile-icon-wrapper">
+                        <img src="media/my-activities.png" 
+                        alt="An icon of a person hiking" class="profile-icons">
+                        <span class="profile-text h3-style">My activities</span>
+                    </span>
+                    <span class="hidden-description">
                         Book, cancel, or manage your activites.
-                    </p>
+                    </span>
                 </button>              
             </div>
-        
+        </div>
         <script src="js/site_interactions.js"></script>
     </body>
 </html>
