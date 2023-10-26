@@ -1,2 +1,2 @@
 # My Event Website
- DECO7140 Exercise 1
+ DECO7140 Website Implementation
